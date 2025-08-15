@@ -3,42 +3,98 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Portfolio</title>
+  <title>Tu Nombre — Portfolio</title>
+  <meta name="description" content="Portfolio de Izan Ruzafa: proyectos, contacto y aprendizaje en desarrollo web." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Tu Nombre</h1>
-    <p class="tagline">Estudiante de informática — construyendo proyectos reales</p>
-    <nav>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <nav class="topnav">
+        <a class="brand" href="#home">Tu Nombre</a>
+        <div class="links">
+          <a href="#proyectos">Proyectos</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+
+      <section id="home" class="hero">
+        <h1>Hola, soy <span>Tu Nombre</span>.</h1>
+        <p class="tagline">Estudiante de informática y ADE — programador full-stack.</p>
+        <div class="cta">
+          <a class="btn primary" href="docs/CV.pdf" target="_blank" rel="noreferrer">Ver CV</a>
+          <a class="btn" href="https://github.com/XRustaa" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </div>
   </header>
 
-  <main>
-    <section id="proyectos">
+  <main class="container">
+    <section id="proyectos" class="section">
       <h2>Proyectos</h2>
       <div class="grid">
         <article class="card">
-          <h3>Proyecto 1</h3>
-          <p>Descripción breve del problema y la solución.</p>
-          <a class="btn" href="#" target="_blank" rel="noreferrer">Ver repo</a>
+          <h3>To-Do API (en progreso)</h3>
+          <p>API sencilla en Node.js/Express para crear y listar tareas.</p>
+          <ul class="bullets">
+            <li>Rutas: <code>/health</code>, <code>/todos</code></li>
+            <li>Formato JSON</li>
+            <li>Próximo: guardar en SQLite</li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn" href="https://github.com/XRustaa/todo-api" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+          <div class="tags">
+            <span>Node</span><span>Express</span><span>JSON</span>
+          </div>
         </article>
-        <!-- Más cards aquí -->
+
+        <article class="card">
+          <h3>Mi sitio de portfolio</h3>
+          <p>Web estática hecha a mano con HTML/CSS. Publicada con GitHub Pages.</p>
+          <ul class="bullets">
+            <li>Responsive y accesible</li>
+            <li>Secciones: proyectos, sobre mí, contacto</li>
+            <li>Fácil de mantener</li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="https://XRustaa.github.io/miPortFolio/" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn" href="https://github.com/XRustaa/miPortFolio" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="contacto">
+    <section id="sobre-mi" class="section">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy estudiante de informática y ADE. Ahora mismo estoy practicando
+        <strong>JavaScript</strong> en el front y <strong>Node.js</strong> en el back.
+        Me interesa construir APIs y conectarlas con una base de datos.
+      </p>
+      <p>
+        Tecnologías que uso o estoy aprendiendo: HTML, CSS, JavaScript, Node.js, Express, Git/GitHub.
+      </p>
+    </section>
+
+    <section id="contacto" class="section">
       <h2>Contacto</h2>
-      <ul>
-        <li>GitHub: <a href="https://github.com/TU_USUARIO" target="_blank">TU_USUARIO</a></li>
-        <li>Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a></li>
+      <ul class="contact">
+        <li>GitHub: <a href="https://github.com/XRustaa" target="_blank" rel="noreferrer">XRustaa</a></li>
+        <li>Email: <a href="mailto:izan.ruzafa@example.com">izan.ruzafa@example.com</a></li>
       </ul>
     </section>
   </main>
 
-  <footer>© <span id="year"></span> Tu Nombre</footer>
+  <footer class="site-footer">
+    © <span id="year"></span> Izan Ruzafa
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
